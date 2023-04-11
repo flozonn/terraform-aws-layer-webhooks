@@ -1,6 +1,6 @@
 resource "aws_cloudfront_distribution" "cdn" {
   origin {
-    domain_name         = var.dns
+    domain_name         = var.dns 
     origin_id           = "origin"
     dynamic custom_header {
       for_each = var.lambda_variables
